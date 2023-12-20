@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        table {
+            -webkit-box-shadow: 66px 39px 10px 4px rgba(0,0,0,0.19);
+            -moz-box-shadow: 66px 39px 10px 4px rgba(0,0,0,0.19);
+            box-shadow: 66px 39px 10px 4px rgba(0,0,0,0.19);
+            border: solid 1px burlywood;
+        }
+        table thead th {
+            background-color: rgb(48, 41, 30);
+            color: rgb(214, 213, 213);
+        }
+        table tfoot td {
+            background-color: burlywood;
+        }
+        table tbody tr:nth-child(even) {
+            background-color: rgb(243, 229, 212);;
+        }
+        table tr:hover td {
+            background-color: rgb(128, 117, 102);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <table width="250" align="center" cellspacing="5" cellpadding="5" summary="Esta tabela se refere as idades da turma A da Dio">
+        <caption>Tabela de idades dos alunos Dio</caption>
+        <thead>
+            <tr>
+                <th colspan="2">Minha Tabela</th>
+            </tr>
+            <tr>
+                <th title="Nome Completo">Nome</th>
+                <th>Idade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Wellington</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>Shoyo</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>Ronyelson</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td>Blue Pen</td>
+                <td>44</td>
+            </tr>
+            <tr>
+                <td>Edinaldo</td>
+                <td>58</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>6</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

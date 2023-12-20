@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template - Utilizar como modelo</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Página Principal</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="horario-atendimento.html">Horário de Atendimento</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="header">
+                <img src="images/contatos.png" width="986" alt="Logo da clinica de cardiologia com o seu nome CardioCare Center">
+            </div>
+    
+            <div class="content">
+                <div class="contacts">
+                    <ul>
+                        <li>Telefone: XXXX-XXXX</li>
+                        <li>WhatsApp: (XX) XXXX-XXXX</li>
+                        <li>E-mail: info@cardiocare.com</li>
+                        <li>Endereço: Rua Cardiologista, 123, Bairro Coração Feliz, Cidade Saudável</li>
+                    </ul>
+                    
+                    <iframe 
+                        title="Endereço da clinica" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1829.3403544122016!2d-46.75061973390281!3d-23.50800736350143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cefed46e7f103d%3A0x4bbc128c8d76f727!2sHospital%20Portinari!5e0!3m2!1spt-BR!2sbr!4v1703113315549!5m2!1spt-BR!2sbr" width="400" height="250" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                
+                <div class="contact-form">
+                    <form onsubmit="alert('Formulário enviado com sucesso!')">
+                        <fieldset>
+                            <legend>Formulário para contato</legend>
+                            
+                            <label>Nome: </label>
+                            <input type="text" name="name"><br>
+                            
+                            <label>E-mail: </label>
+                            <input type="email" name="email"><br>
+                            
+                            <label>Assunto: </label>
+                            <input type="text" name="subject"><br>
+                            
+                            <label>Mensagem: </label>
+                            <textarea name=""cols="20" rows="10" name="message"></textarea><br>
+    
+                            <button type="submit">Enviar</button>
+                            <button type="reset">Limpar</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+    
+            <div class="footer">
+                <h4>Entre em Contato Conosco:</h4>
+                <ul>
+                    <li>
+                        <strong>Endereço:</strong> Rua Cardiologista, 123, Bairro Coração Feliz, Cidade Saudável
+                    </li>
+                    <li>
+                        <strong>WhatsApp:</strong> (XX) XXXX-XXXX
+                    </li>
+                    <li>
+                        <strong>E-mail:</strong> info@cardiocare.com
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
