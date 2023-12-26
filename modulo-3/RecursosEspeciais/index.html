@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos Especiais</title>
+    <style>
+        kbd {
+            border: solid 1px black;
+        }
+        pre {
+            background-color: #f1f1f1;
+        }
+        code {
+            background-color: #f1f1f1;
+            color: red;
+        }
+        pre > p {
+            font-style: italic;
+            color: gray;
+            padding-left: 70px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Datalist</h1>
+    <input type="search" name="search" list="browsers" />
+    <datalist id="browsers">
+        <option value="">Selecione um navegador</option>
+        <option>Google Chrome</option>
+        <option>Mozila Firefox</option>
+        <option>Microsoft Edge</option>
+        <option>Safari</option>
+        <option>Opera</option>
+    </datalist>
+    <hr />
+    <select name="browsers">
+        <option value="">Selecione um navegador</option>
+        <option value="chrome">Google Chrome</option>
+        <option value="firefox">Firefox</option>
+        <option value="edge">Edge</option>
+        <option value="safari">Safari</option>
+        <option value="opera">Opera</option>
+    </select>
+
+    <h1>Kbd, Code e pre</h1>
+    <p>
+        Para copiar esta informacao, pressione <kbd>CTRL</kbd> + <kbd>C</kbd>
+    </p>
+
+    <p>
+        Para trocar o fundo de um elemento, utilize o comando <code>background-color</code>
+    </p>
+
+    <p>
+        Comando completo para alterar uma cor de fundo:
+    </p>
+    <pre>
+        <p>//Neste momento voce aplica desta forma</p>
+        <code>
+            code {
+                background-color: #f1f1f1;
+                color: red;
+            }
+        </code>
+    </pre>
+
+    <h1>Details e summary</h1>
+    <details>
+        <summary>Como troco a cor de fundo de um elemento no HTML?</summary>
+        <p>Para executar esta acao, utilize o comando <code>background-color</code> no CSS.</p>
+    </details>
+
+    <h1>Meter e Progress</h1>
+    <meter max="500" min="0" value="250"></meter>
+    <progress id="progress" min="0" max="100" value="0"></progress>
+    <script>
+        var progress = document.getElementById('progress');
+        const interval = setInterval(() => {
+            progress.value += 10;
+            if (progress.value >= 100) {
+                //alert('Carregamento realizado com sucesso')
+                clearInterval(interval);
+            }
+        }, 1000)
+    </script>
+
+    <h1>Mark com javascript</h1>
+
+    <input type="text" id="busca" /><br />
+    <p id="descricao">
+        O elemento HTML aside representa uma seção de uma página que consiste de conteúdo que é tangencialmente relacionado ao conteúdo do seu entorno, que poderia ser considerado separado do conteúdo. Essas seções são, muitas vezes, representadas como barras laterais. Elas muitas vezes contem explicações laterais, como a definição de um glossário; conteúdo vagamente relacionado, como avisos; a biografia do autor; ou, em aplicações web, informações de perfil ou links de blogs relacionados.
+    </p>
+    <script>
+        var searchField = document.getElementById('busca');
+        var descriptionObject = document.getElementById('descricao');
+        var textToSearch = descriptionObject.innerHTML;
+
+        function realizaBusca(busca) {
+            const regex = new RegExp(`(${busca})(?!(.(<mark))*</mark>)+`, 'ig');
+            const ocurrences = textToSearch.match(regex);
+            descriptionObject.innerHTML = textToSearch.replace(regex, `<mark>${busca}</mark>`);
+        }
+
+        searchField.addEventListener('keyup', (e) => realizaBusca(e.target.value))
+    </script>
+
+    <h1>Canvas</h1>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+
+    <hr />
+
+    <canvas id="myCanvas2" width="200" height="100" style="border:1px solid #000000;"></canvas>
+    <script>
+        var c = document.getElementById("myCanvas2");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0, 0);
+        ctx.lineTo(200, 100);
+        ctx.stroke();
+    </script>
+</body>
+</html>

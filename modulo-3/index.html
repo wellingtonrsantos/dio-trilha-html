@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags HTML 5 - Estrutural</title>
+    <style>
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+        }
+        nav ul li a {
+            padding: 10px 15px;
+            color: blue;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+        nav ul li a:hover {
+            padding: 10px 15px;
+            color: white;
+            background-color: blue;
+        }
+        blockquote {
+            background-color: rgb(224, 216, 216);
+            padding: 20px;
+            border-left: red solid 7px;
+        }
+        article time, q {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+                <li><a href="tel:+5511958769999">Telefone</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <article>
+            <p>Qual o seu prato favorito?</p>
+            <article>
+                <p>É pizza!</p>
+            </article>
+        </article>
+
+        <article>
+            <h1>Descoberta de vida em outro planeta</h1>
+            <p>Artigo publicado em <time pubdate >22/12/2023 20:37</time></p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, veritatis. Quam, non ratione. Tempora sapiente repudiandae iure aut quis magni fugit, ad quisquam quaerat maiores officiis accusantium facere harum libero.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sed maiores minus ipsum est ratione voluptatem repellendus, natus laudantium, nisi facilis laborum nemo labore cupiditate et quas quaerat cum. Numquam!</p>
+            <blockquote cite="fonte-outrosite.com">
+                <p>Citacao aqui...</p>
+                <p>Citacao aqui...</p>
+            </blockquote>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, nam, aspernatur consequatur corrupti, cupiditate illo dolores aperiam fugit perspiciatis esse porro corporis. Quidem soluta, modi eum assumenda natus vel nobis. <q cite="fontedacitacao.com">Citacao pequena aqui..!</q></p>
+        </article>
+    </main>
+    
+    <footer>
+        <a href="pagina02.html">Pagina 2</a>
+    </footer>
+</body>
+</html>
